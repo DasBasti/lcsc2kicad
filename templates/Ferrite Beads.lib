@@ -1,7 +1,7 @@
 #
 # {MFRPart}
 #
-DEF {MFRPart_sanitized} R 0 0 N Y 1 F N
+DEF {MFRPart_sanitized} BD 0 0 N Y 1 F N
 F0 "L" 80 0 50 V V C CNN
 F1 "L" 0 0 50 V V C CNN
 F2 "{Package}" -70 0 50 V I C CNN
