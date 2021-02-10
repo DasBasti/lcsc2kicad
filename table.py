@@ -23,7 +23,7 @@ data = {}
 
 ### Load file into buffer
 def load_data(file):
-    book = open_workbook(file, on_demand=True)
+    book = open_workbook(file_contents=file, on_demand=True)
     for name in book.sheet_names():
         if name == 'JLCPCB SMT Parts Library':
             sheet = book.sheet_by_name(name)
@@ -47,8 +47,7 @@ def load_data(file):
                     if columns[c] == "MFRPart": # part name
                         if value in names:
                             value += "_"
-                        else:
-                            names.append(value)
+                        names.append(value)
                         
                         fields["MFRPart_sanitized"] = sanitise_name(value)
                     if columns[c] == "Description":

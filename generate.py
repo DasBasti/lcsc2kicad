@@ -1,6 +1,7 @@
 import table
 import os
 import glob
+import requests
 from xlrd import open_workbook
 
 dcm_templates = {}
@@ -21,8 +22,13 @@ for filepath in glob.iglob("templates/*.lib"):
     with open(filepath) as f:
         lib_templates[os.path.basename(filepath).split('.')[0]] = f.read()
 
+print("fetch file from JLCPCB")
+url = 'https://jlcpcb.com/componentSearch/uploadComponentInfo'
+r = requests.get(url)
 
-table.load_data("uploadComponentInfo")
+
+
+table.load_data(r.content)
 
 parts = 0
 for lib in table.data:
