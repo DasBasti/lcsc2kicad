@@ -7,7 +7,7 @@ files.
 To get the generated libraries got to: [kicad_jlcpcb_smt_parts](https://github.com/DasBasti/kicad_jlcpcb_smt_parts)
 
 # Setup
-    pip install xlrd
+    pip install -r requirements.txt
 
 # Run
     python generate.py
