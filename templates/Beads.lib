@@ -1,13 +1,11 @@
-EESchema-LIBRARY Version 2.4
-#encoding utf-8
 #
 # {MFRPart}
 #
 DEF {MFRPart_sanitized} R 0 0 N Y 1 F N
 F0 "L" 80 0 50 V V C CNN
 F1 "L" 0 0 50 V V C CNN
-F2 "" -70 0 50 V I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "{Package}" -70 0 50 V I C CNN
+F3 "{SecondCategory}" 0 0 50 H I C CNN
 F4 "{MFRPart}" 0 0 50 H I C CNN "MFR.Part"
 F5 "{SecondCategory}" 0 0 50 H I C CNN "Part Category"
 F6 "{SolderJoint}" 0 0 50 H I C CNN "Solder Joint"
@@ -18,7 +16,8 @@ F10 "{Price}" 0 0 50 H I C CNN "Price"
 F11 "{LCSC}" 0 0 50 H I C CNN "LCSC"
 F12 "{Stock}" 0 0 50 H I C CNN "Stock"
 $FPLIST
- R_*
+ L_*
+ {Package}
 $ENDFPLIST
 DRAW
 S -40 -100 40 100 0 1 10 F
@@ -26,5 +25,3 @@ X ~ 1 0 150 50 D 50 50 1 1 P
 X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
-#
-#End Library

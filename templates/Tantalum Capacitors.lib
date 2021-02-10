@@ -4,8 +4,8 @@
 DEF {MFRPart_sanitized} C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
 F1 "CP" 25 -100 50 H V L CNN
-F2 "" 38 -150 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "{Package}" 38 -150 50 H I C CNN
+F3 "{SecondCategory}" 0 0 50 H I C CNN
 F4 "{MFRPart}" 0 0 50 H I C CNN "MFR.Part"
 F5 "{SecondCategory}" 0 0 50 H I C CNN "Part Category"
 F6 "{SolderJoint}" 0 0 50 H I C CNN "Solder Joint"
