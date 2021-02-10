@@ -1,0 +1,28 @@
+#
+# {MFRPart}
+#
+DEF {MFRPart_sanitized} R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "R" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "{MFRPart}" 0 0 50 H I C CNN "MFR.Part"
+F5 "{SecondCategory}" 0 0 50 H I C CNN "Part Category"
+F6 "{SolderJoint}" 0 0 50 H I C CNN "Solder Joint"
+F7 "{Manufacturer}" 0 0 50 H I C CNN "Manufacturer"
+F8 "{LibraryType}" 0 0 50 H I C CNN "Library Type"
+F9 "{Description}" 0 0 50 H I C CNN "Description"
+F10 "{Price}" 0 0 50 H I C CNN "Price"
+F11 "{LCSC}" 0 0 50 H I C CNN "LCSC"
+F12 "{Stock}" 0 0 50 H I C CNN "Stock"
+$FPLIST
+ C_*
+ {Package}
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
