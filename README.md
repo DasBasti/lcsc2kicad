@@ -4,6 +4,8 @@ This script will fetch the current available parts for SMT
 assembly offered by JLCPCB and generate KiCad Part Library 
 files.
 
+To get the generated libraries got to: [kicad_jlcpcb_smt_parts](https://github.com/DasBasti/kicad_jlcpcb_smt_parts)
+
 # Setup
     pip install xlrd
 
