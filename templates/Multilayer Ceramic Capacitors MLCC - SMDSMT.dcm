@@ -1,6 +1,0 @@
-#
-$CMP {MFRPart_sanitized}
-D {Description}
-K 
-F {Datasheet}
-$ENDCMP

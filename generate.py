@@ -6,10 +6,15 @@ from xlrd import open_workbook
 dcm_templates = {}
 lib_templates = {}
 
-for filepath in glob.iglob("templates/*.dcm"):
+"""for filepath in glob.iglob("templates/*.dcm"):
     print("load: "+filepath)
     with open(filepath) as f:
         dcm_templates[os.path.basename(filepath).split('.')[0]] = f.read()
+"""
+
+print("load: DCM template")
+with open("templates/template.dcm") as f:
+    dcm_template = f.read()
 
 for filepath in glob.iglob("templates/*.lib"):
     print("load: "+filepath)
@@ -33,7 +38,7 @@ for lib in table.data:
             if template in lib_templates:
                 parts+=1
                 lib_str += lib_templates[template].format(**part)
-                dcm_str += dcm_templates[template].format(**part)
+                dcm_str += dcm_template.format(**part)
 
     lib_str += "#\n#End Library"
     dcm_str += "#\n#End Doc Library"
