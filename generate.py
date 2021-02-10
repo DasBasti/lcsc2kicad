@@ -17,7 +17,7 @@ for filepath in glob.iglob("templates/*.lib"):
         lib_templates[os.path.basename(filepath).split('.')[0]] = f.read()
 
 
-table.load_data("JLCPCB SMT Parts Library(20210203).xls")
+table.load_data("uploadComponentInfo")
 
 parts = 0
 for lib in table.data:
@@ -38,9 +38,9 @@ for lib in table.data:
     lib_str += "#\n#End Library"
     dcm_str += "#\n#End Doc Library"
 
-    with open("export/"+file_pre+".lib", "w") as l:
+    with open("export/LCSC_"+file_pre+".lib", "w") as l:
         l.write(lib_str)
-    with open("export/"+file_pre+".dcm", "w") as l:
+    with open("export/LCSC_"+file_pre+".dcm", "w") as l:
         l.write(dcm_str)
 
 print("Total: {0} parts".format(parts))
