@@ -7,11 +7,8 @@ from xlrd import open_workbook
 dcm_templates = {}
 lib_templates = {}
 
-"""for filepath in glob.iglob("templates/*.dcm"):
-    print("load: "+filepath)
-    with open(filepath) as f:
-        dcm_templates[os.path.basename(filepath).split('.')[0]] = f.read()
-"""
+if not os.path.exists("export"):
+    os.mkdir("export")
 
 print("load: DCM template")
 with open("templates/template.dcm") as f:
@@ -26,7 +23,7 @@ print("fetch file from JLCPCB")
 url = 'https://jlcpcb.com/componentSearch/uploadComponentInfo'
 r = requests.get(url)
 
-
+print("parsing data. This might take a while!")
 
 table.load_data(r.content)
 
