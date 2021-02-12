@@ -1,4 +1,4 @@
-#
+#! { "pins" : 8 }
 # {MFRPart}
 #
 DEF {MFRPart_sanitized} U 0 20 Y Y 1 F N
