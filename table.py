@@ -52,6 +52,8 @@ def load_data(file):
                         fields["MFRPart_sanitized"] = sanitise_name(value)
                     if columns[c] == "Description":
                         value = value.replace(grp, "").strip()
+                    if columns[c] == "SolderJoint":
+                        value = int(value)
                     fields[columns[c]] = value
                 data[cat][grp_field].append(fields)
         book.unload_sheet(name)
