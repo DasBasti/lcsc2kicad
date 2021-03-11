@@ -78,9 +78,9 @@ for lib in table.data:
     dcm_str += "#\n#End Doc Library"
 
     if(lib_parts > 0):
-        with open("export/LCSC_"+file_pre+".lib", "w") as l:
+        with open("export/LCSC_"+file_pre+".lib", "w" ,encoding='utf8') as l:
             l.write(lib_str)
-        with open("export/LCSC_"+file_pre+".dcm", "w") as l:
+        with open("export/LCSC_"+file_pre+".dcm", "w" ,encoding='utf8') as l:
             l.write(dcm_str)
 
 print("Total: {0} parts".format(parts))
