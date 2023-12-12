@@ -32,6 +32,8 @@ if len(sys.argv) == 1:
     url = 'https://jlcpcb.com/componentSearch/uploadComponentInfo'
     r = requests.get(url)
     db = r.content
+    if len(db) < 5:
+        raise Exception("No data found in JLCPCB database download. Exiting.")
 else:
     print("load from: ", sys.argv[1])
     with open(sys.argv[1], "rb") as db_file:
